@@ -1,34 +1,39 @@
 ﻿<Page
-    x:Class="DesignPatterns.MainPage"
+    x:Class="DesignPatterns.Pages.DecoratorPatternPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:DesignPatterns"
+    xmlns:local="using:DesignPatterns.Pages"
+    xmlns:controls="using:DesignPatterns.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-        <ScrollViewer>
+        <controls:PageHeader>
+            <controls:PageHeader.HeaderContent>
+                <TextBlock Text="DECORATOR PATTERN" Style="{ThemeResource PageTitleTextBlockStyle}" TextWrapping="NoWrap"/>
+            </controls:PageHeader.HeaderContent>
+        </controls:PageHeader>
+
+        <ScrollViewer Grid.Row="1">
             <StackPanel Margin="20">
                 
-                <TextBlock Text="Decorator pattern" 
-                           FontWeight="Bold"
-                           Margin="8"
-                           HorizontalAlignment="Center" />
-                
                 <Button x:Name="decoratorResetButton" 
-                        Content="reset"
+                        Content="reset random values"
                         Margin="0,0,0,5"
                         Click="DecoratorResetButton_Click"
                         HorizontalAlignment="Center" />
 
                 <StackPanel x:Name="decoratorContent" />
-                
+
             </StackPanel>
-           
+
         </ScrollViewer>
-       
         
     </Grid>
 </Page>

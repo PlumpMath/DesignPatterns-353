@@ -10,8 +10,8 @@ namespace DesignPatterns.DecoratorPattern
         {
             Rectangle rect = new Rectangle();
 
-            rect.Width = 200;
-            rect.Height = 60;
+            //rect.Width = 200;
+            //rect.Height = 60;
             rect.Fill = new SolidColorBrush(Colors.Pink);
             rect.Margin = new Windows.UI.Xaml.Thickness(5);
 
