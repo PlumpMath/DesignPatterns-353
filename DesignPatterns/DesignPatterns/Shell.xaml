@@ -60,7 +60,7 @@
                    IsTabStop="False">
             <SplitView.Pane>
                 
-                <controls:NavMenuListView x:Name="NavMenuList"
+                <controls:NavMenuListView x:Name="navMenuListView"
                                           TabIndex="3"
                                           Margin="0,48,0,0"
                                           ContainerContentChanging="NavMenuItemContainerContentChanging"
@@ -91,7 +91,7 @@
         <ToggleButton x:Name="togglePaneButton"
                       TabIndex="1"
                       Style="{StaticResource SplitViewTogglePaneButtonStyle}"
-                      IsChecked="{Binding IsPaneOpen, ElementName=RootSplitView, Mode=TwoWay}"
+                      IsChecked="{Binding IsPaneOpen, ElementName=splitView, Mode=TwoWay}"
                       Unchecked="TogglePaneButton_Checked"
                       AutomationProperties.Name="Menu"
                       ToolTipService.ToolTip="Menu" />

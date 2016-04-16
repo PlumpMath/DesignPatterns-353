@@ -64,7 +64,9 @@ namespace DesignPatterns
 
             SystemNavigationManager.GetForCurrentView().BackRequested += SystemNavigationManager_BackRequested;
 
-            NavMenuList.ItemsSource = navlist;
+            navMenuListView.ItemsSource = navlist;
+
+            navMenuListView.SelectedIndex = 0;
         }
 
         public Frame AppFrame { get { return this.frame; } }
@@ -175,13 +177,13 @@ namespace DesignPatterns
                     }
                 }
 
-                var container = (ListViewItem)NavMenuList.ContainerFromItem(item);
+                var container = (ListViewItem)navMenuListView.ContainerFromItem(item);
 
                 // While updating the selection state of the item prevent it from taking keyboard focus.  If a
                 // user is invoking the back button via the keyboard causing the selected nav menu item to change
                 // then focus will remain on the back button.
                 if (container != null) container.IsTabStop = false;
-                NavMenuList.SetSelectedItem(container);
+                navMenuListView.SetSelectedItem(container);
                 if (container != null) container.IsTabStop = true;
             }
         }
