@@ -96,6 +96,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BridgePattern\Abstraction.cs" />
+    <Compile Include="BridgePattern\Bridge.cs" />
+    <Compile Include="BridgePattern\ImplementationV1.cs" />
+    <Compile Include="BridgePattern\ImplementationV2.cs" />
     <Compile Include="Controls\NavMenuListView.cs" />
     <Compile Include="Controls\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
@@ -105,6 +109,9 @@
     <Compile Include="DecoratorPattern\FillDecorator.cs" />
     <Compile Include="DecoratorPattern\IBaseRectangle.cs" />
     <Compile Include="NavMenuItem.cs" />
+    <Compile Include="Pages\BridgePatternPage.xaml.cs">
+      <DependentUpon>BridgePatternPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProxyPatternPage.xaml.cs">
       <DependentUpon>ProxyPatternPage.xaml</DependentUpon>
     </Compile>
@@ -139,6 +146,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Controls\PageHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\BridgePatternPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

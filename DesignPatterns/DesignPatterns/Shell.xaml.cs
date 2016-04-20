@@ -34,10 +34,16 @@ namespace DesignPatterns
                 },
                 new NavMenuItem()
                 {
-                    Symbol = Symbol.Calculator,
+                    Symbol = Symbol.Admin,
                     Label = "Proxy Pattern",
                     DestPage = typeof(ProxyPatternPage)
                 },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.AlignCenter,
+                    Label = "Bridge Pattern",
+                    DestPage = typeof(BridgePatternPage)
+                }
             });
 
         public static Shell Current = null;
