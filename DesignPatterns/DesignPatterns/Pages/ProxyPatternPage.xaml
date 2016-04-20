@@ -8,6 +8,141 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="TextBoxStates">
+                <VisualState x:Name="ChoosePwTxtBxEnabled" />
 
+                <VisualState x:Name="EnterPwTxtBxEnabled">
+                    <VisualState.Setters>
+                        <Setter Target="chooseNmTxtBx.IsEnabled" Value="false" />
+                        <Setter Target="choosePwTxtBx.IsEnabled" Value="false" />
+                        <Setter Target="enterPwTxtBx.IsEnabled" Value="true" />
+                        <Setter Target="addTxtBx.IsEnabled" Value="false" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="AddTxtBxEnabled">
+                    <VisualState.Setters>
+                        <Setter Target="addTxtBx.IsEnabled" Value="true" />
+                        <Setter Target="chooseNmTxtBx.IsEnabled" Value="false" />
+                        <Setter Target="choosePwTxtBx.IsEnabled" Value="false" />
+                        <Setter Target="enterPwTxtBx.IsEnabled" Value="true" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+
+            <VisualStateGroup x:Name="SetPwBtnStates">
+                <VisualState x:Name="SetPwBtnDisabled" />
+
+                <VisualState x:Name="SetPwBtnEnabled">
+                    <VisualState.Setters>
+                        <Setter Target="setPwBtn.IsEnabled" Value="true" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+
+            <VisualStateGroup x:Name="CheckPwBtnStates">
+                <VisualState x:Name="CheckPwBtnDisabled" />
+
+                <VisualState x:Name="CheckPwBtnEnabled">
+                    <VisualState.Setters>
+                        <Setter Target="checkPwBtn.IsEnabled" Value="true" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+
+            <VisualStateGroup x:Name="AddBtnStates">
+                <VisualState x:Name="AddBtnDisabled" />
+
+                <VisualState x:Name="AddBtnEnabled">
+                    <VisualState.Setters>
+                        <Setter Target="addBtn.IsEnabled" Value="true" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+
+            <VisualStateGroup x:Name="ResultGridVisibilityStates">
+                <VisualState x:Name="ResultGridCollapsed" />
+
+                <VisualState x:Name="ResultGridVisible">
+                    <VisualState.Setters>
+                        <Setter Target="resultGrid.Visibility" Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState> 
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <ScrollViewer>
+
+            <StackPanel Width="300" 
+                        HorizontalAlignment="Center">
+
+                <Button x:Name="resetButton" 
+                        Content="Reset" 
+                        Click="ResetButton_Click"
+                        Margin="0,5,0,0" />
+
+                <TextBox x:Name="chooseNmTxtBx" 
+                         Header="What's your name?" 
+                         TextChanging="TxtBx_TextChanging"
+                         Margin="0,15,0,0"/>
+
+                <TextBox x:Name="choosePwTxtBx" 
+                         Header="Choose a password (4 character minimum)" 
+                         TextChanging="TxtBx_TextChanging"
+                         Margin="0,10,0,0"/>
+
+                <Button x:Name="setPwBtn" 
+                        Content="Set password" 
+                        Margin="0,5,0,0"
+                        Click="SetPwBtn_Click"
+                        IsEnabled="False"/>
+
+                <TextBox x:Name="enterPwTxtBx" 
+                         Header="Enter your password" 
+                         Margin="0,30,0,0" 
+                         TextChanging="TxtBx_TextChanging"
+                         IsEnabled="False"/>
+
+                <Button x:Name="checkPwBtn" 
+                        Content="Check password" 
+                        Margin="0,5,0,0"
+                        Click="CheckPwBtn_Click"
+                        IsEnabled="False"/>
+
+                <Grid x:Name="resultGrid" 
+                      Margin="0,10,0,0" 
+                      Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Rectangle x:Name="resultRect" 
+                               Fill="Gray"
+                               Width="300" />
+                    <TextBlock x:Name="resultText" 
+                               Padding="8" 
+                               Foreground="White" 
+                               TextWrapping="WrapWholeWords"
+                               VerticalAlignment="Bottom" />
+
+                    <TextBox x:Name="addTxtBx"
+                             Grid.Row="1"
+                             Margin="0,25,0,0"
+                             Header="Add some text"
+                             IsEnabled="False"
+                             TextChanging="TxtBx_TextChanging" />
+                    <Button x:Name="addBtn" 
+                            Grid.Row="2"
+                            Content="Add" 
+                            Margin="0,5,0,0"
+                            Click="AddBtn_Click"
+                            IsEnabled="False"/>
+                </Grid>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

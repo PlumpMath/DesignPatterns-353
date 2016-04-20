@@ -28,13 +28,13 @@ namespace DesignPatterns
             {
                 new NavMenuItem()
                 {
-                    Symbol = Symbol.Bullets,
+                    Symbol = Symbol.Character,
                     Label = "Decorator Pattern",
                     DestPage = typeof(DecoratorPatternPage)
                 },
                 new NavMenuItem()
                 {
-                    Symbol = Symbol.Bullets,
+                    Symbol = Symbol.Calculator,
                     Label = "Proxy Pattern",
                     DestPage = typeof(ProxyPatternPage)
                 },
