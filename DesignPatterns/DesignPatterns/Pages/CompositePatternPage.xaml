@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="DesignPatterns.Pages.CompositePatternPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DesignPatterns.Pages"
+    xmlns:controls="using:DesignPatterns.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <controls:PageHeader>
+            <controls:PageHeader.HeaderContent>
+                <TextBlock Text="COMPOSITE PATTERN" Style="{ThemeResource PageTitleTextBlockStyle}" TextWrapping="NoWrap"/>
+            </controls:PageHeader.HeaderContent>
+        </controls:PageHeader>
+
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBlock TextWrapping="WrapWholeWords">
+                Component and Composite (collection of Components) both implement the same interface, IComponent, using generic Types.
+            </TextBlock>
+            <Button Content="Reset grid components" Click="ResetButton_Click" Margin="0,15,0,20" />
+            
+            <GridView x:Name="blueGridView" SelectionChanged="GridView_SelectionChanged" Margin="0,10,0,0" />
+            <Button x:Name="blueRemoveButton" Content="Remove item" Margin="0,0,0,30" IsEnabled="False" Click="RemoveButton_Click" />
+
+            <GridView x:Name="redGridView" SelectionChanged="GridView_SelectionChanged" Margin="0,10,0,0" />
+            <Button x:Name="redRemoveButton" Content="Remove item" IsEnabled="False" Margin="0,0,0,30" Click="RemoveButton_Click" />
+
+            <GridView x:Name="yellowGridView" SelectionChanged="GridView_SelectionChanged" Margin="0,10,0,0" />
+            <Button x:Name="yellowRemoveButton" Content="Remove item" IsEnabled="False" Click="RemoveButton_Click" />
+        </StackPanel>
+
+    </Grid>
+</Page>

@@ -100,6 +100,9 @@
     <Compile Include="BridgePattern\Bridge.cs" />
     <Compile Include="BridgePattern\ImplementationV1.cs" />
     <Compile Include="BridgePattern\ImplementationV2.cs" />
+    <Compile Include="CompositePattern\Component.cs" />
+    <Compile Include="CompositePattern\Composite.cs" />
+    <Compile Include="CompositePattern\IComponent.cs" />
     <Compile Include="Controls\NavMenuListView.cs" />
     <Compile Include="Controls\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
@@ -111,6 +114,9 @@
     <Compile Include="NavMenuItem.cs" />
     <Compile Include="Pages\BridgePatternPage.xaml.cs">
       <DependentUpon>BridgePatternPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CompositePatternPage.xaml.cs">
+      <DependentUpon>CompositePatternPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProxyPatternPage.xaml.cs">
       <DependentUpon>ProxyPatternPage.xaml</DependentUpon>
@@ -150,6 +156,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\BridgePatternPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CompositePatternPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -28,7 +28,7 @@ namespace DesignPatterns
             {
                 new NavMenuItem()
                 {
-                    Symbol = Symbol.Character,
+                    Symbol = Symbol.Highlight,
                     Label = "Decorator Pattern",
                     DestPage = typeof(DecoratorPatternPage)
                 },
@@ -43,6 +43,12 @@ namespace DesignPatterns
                     Symbol = Symbol.AlignCenter,
                     Label = "Bridge Pattern",
                     DestPage = typeof(BridgePatternPage)
+                },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Library,
+                    Label = "Composite Pattern",
+                    DestPage = typeof(CompositePatternPage)
                 }
             });
 
