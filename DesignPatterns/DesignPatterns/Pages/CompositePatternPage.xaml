@@ -21,21 +21,51 @@
             </controls:PageHeader.HeaderContent>
         </controls:PageHeader>
 
-        <StackPanel Grid.Row="1" Margin="10">
-            <TextBlock TextWrapping="WrapWholeWords">
+        <ScrollViewer Grid.Row="1" 
+                      VerticalScrollBarVisibility="Auto">
+
+            <StackPanel  Margin="10">
+                <TextBlock TextWrapping="WrapWholeWords">
                 Component and Composite (collection of Components) both implement the same interface, IComponent, using generic Types.
-            </TextBlock>
-            <Button Content="Reset grid components" Click="ResetButton_Click" Margin="0,15,0,20" />
-            
-            <GridView x:Name="blueGridView" SelectionChanged="GridView_SelectionChanged" Margin="0,10,0,0" />
-            <Button x:Name="blueRemoveButton" Content="Remove item" Margin="0,0,0,30" IsEnabled="False" Click="RemoveButton_Click" />
+                </TextBlock>
+                <Button Content="Reset grid components" 
+                        Click="ResetButton_Click" 
+                        Margin="0,15,0,20" />
 
-            <GridView x:Name="redGridView" SelectionChanged="GridView_SelectionChanged" Margin="0,10,0,0" />
-            <Button x:Name="redRemoveButton" Content="Remove item" IsEnabled="False" Margin="0,0,0,30" Click="RemoveButton_Click" />
+                <TextBlock Text="System blue colors" 
+                           FontWeight="Bold" />
+                <GridView x:Name="blueGridView" 
+                          SelectionChanged="GridView_SelectionChanged" 
+                          Margin="0,10,0,0" />
+                <Button x:Name="blueRemoveButton" 
+                        Content="Remove item" 
+                        Margin="0,0,0,30" 
+                        IsEnabled="False" 
+                        Click="RemoveButton_Click" />
 
-            <GridView x:Name="yellowGridView" SelectionChanged="GridView_SelectionChanged" Margin="0,10,0,0" />
-            <Button x:Name="yellowRemoveButton" Content="Remove item" IsEnabled="False" Click="RemoveButton_Click" />
-        </StackPanel>
+                <TextBlock Text="System red colors" 
+                           FontWeight="Bold" />
+                <GridView x:Name="redGridView" 
+                          SelectionChanged="GridView_SelectionChanged" 
+                          Margin="0,10,0,0" />
+                <Button x:Name="redRemoveButton" 
+                        Content="Remove item" 
+                        IsEnabled="False" 
+                        Margin="0,0,0,30" 
+                        Click="RemoveButton_Click" />
+
+                <TextBlock Text="System yellow colors" 
+                           FontWeight="Bold" />
+                <GridView x:Name="yellowGridView" 
+                          SelectionChanged="GridView_SelectionChanged" 
+                          Margin="0,10,0,0" />
+                <Button x:Name="yellowRemoveButton" 
+                        Content="Remove item" 
+                        IsEnabled="False" 
+                        Click="RemoveButton_Click" />
+            </StackPanel>
+
+        </ScrollViewer>
 
     </Grid>
 </Page>

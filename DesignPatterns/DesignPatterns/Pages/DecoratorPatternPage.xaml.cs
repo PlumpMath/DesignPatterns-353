@@ -1,4 +1,4 @@
-﻿using DesignPatterns.DecoratorPattern;
+﻿using DesignPatterns.Patterns.DecoratorPattern;
 using System;
 using Windows.UI;
 using Windows.UI.Xaml;

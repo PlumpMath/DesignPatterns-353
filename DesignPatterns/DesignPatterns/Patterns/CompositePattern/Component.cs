@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using Windows.UI.Xaml.Shapes;
 
-namespace DesignPatterns.CompositePattern
+// Inspired by Judith Bishop's 2007 book C# 3.0 Design Patterns
+namespace DesignPatterns.Patterns.CompositePattern
 {
     public class Component<T> : IComponent<T>
     {

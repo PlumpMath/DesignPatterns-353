@@ -3,7 +3,7 @@ using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
-using DesignPatterns.ProxyPattern;
+using DesignPatterns.Patterns.ProxyPattern;
 
 namespace DesignPatterns.Pages
 {

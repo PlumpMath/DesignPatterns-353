@@ -96,21 +96,25 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BridgePattern\Abstraction.cs" />
-    <Compile Include="BridgePattern\Bridge.cs" />
-    <Compile Include="BridgePattern\ImplementationV1.cs" />
-    <Compile Include="BridgePattern\ImplementationV2.cs" />
-    <Compile Include="CompositePattern\Component.cs" />
-    <Compile Include="CompositePattern\Composite.cs" />
-    <Compile Include="CompositePattern\IComponent.cs" />
+    <Compile Include="Data\IconData.cs" />
+    <Compile Include="Pages\FlyweightPatternPage.xaml.cs">
+      <DependentUpon>FlyweightPatternPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Patterns\BridgePattern\Abstraction.cs" />
+    <Compile Include="Patterns\BridgePattern\Bridge.cs" />
+    <Compile Include="Patterns\BridgePattern\ImplementationV1.cs" />
+    <Compile Include="Patterns\BridgePattern\ImplementationV2.cs" />
+    <Compile Include="Patterns\CompositePattern\Component.cs" />
+    <Compile Include="Patterns\CompositePattern\Composite.cs" />
+    <Compile Include="Patterns\CompositePattern\IComponent.cs" />
     <Compile Include="Controls\NavMenuListView.cs" />
     <Compile Include="Controls\PageHeader.xaml.cs">
       <DependentUpon>PageHeader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DecoratorPattern\BaseRectangle.cs" />
-    <Compile Include="DecoratorPattern\StrokeDecorator.cs" />
-    <Compile Include="DecoratorPattern\FillDecorator.cs" />
-    <Compile Include="DecoratorPattern\IBaseRectangle.cs" />
+    <Compile Include="Patterns\DecoratorPattern\BaseRectangle.cs" />
+    <Compile Include="Patterns\DecoratorPattern\StrokeDecorator.cs" />
+    <Compile Include="Patterns\DecoratorPattern\FillDecorator.cs" />
+    <Compile Include="Patterns\DecoratorPattern\IBaseRectangle.cs" />
     <Compile Include="NavMenuItem.cs" />
     <Compile Include="Pages\BridgePatternPage.xaml.cs">
       <DependentUpon>BridgePatternPage.xaml</DependentUpon>
@@ -121,7 +125,10 @@
     <Compile Include="Pages\ProxyPatternPage.xaml.cs">
       <DependentUpon>ProxyPatternPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProxyPattern\ProxySystem.cs" />
+    <Compile Include="Patterns\FlyweightPattern\Flyweight.cs" />
+    <Compile Include="Patterns\FlyweightPattern\FlyweightFactory.cs" />
+    <Compile Include="Patterns\FlyweightPattern\IFlyweight.cs" />
+    <Compile Include="Patterns\ProxyPattern\ProxySystem.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
@@ -160,6 +167,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CompositePatternPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FlyweightPatternPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

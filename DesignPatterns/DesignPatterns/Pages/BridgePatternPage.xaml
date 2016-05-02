@@ -21,10 +21,19 @@
         </controls:PageHeader>
 
         <StackPanel Grid.Row="1">
+            
+            <TextBlock TextWrapping="WrapWholeWords" 
+                       Margin="15">
+                Two implementations featuring a name and a color, representing two versions of the same software. 
+                The circle represents the Abstraction, and access to each implementation is controlled via a Bridge. 
+                Click the button to use the Bridge to switch versions.
+            </TextBlock>
+            
             <Button Content="Switch version" 
                     HorizontalAlignment="Center" 
                     Margin="0,20,0,20" 
                     Click="SwitchButton_Click" />
+            
             <Grid HorizontalAlignment="Center" Margin="20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />

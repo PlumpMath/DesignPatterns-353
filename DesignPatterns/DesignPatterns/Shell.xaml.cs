@@ -49,6 +49,12 @@ namespace DesignPatterns
                     Symbol = Symbol.Library,
                     Label = "Composite Pattern",
                     DestPage = typeof(CompositePatternPage)
+                },
+                new NavMenuItem()
+                {
+                    Symbol = Symbol.Cut,
+                    Label = "Flyweight Pattern",
+                    DestPage = typeof(FlyweightPatternPage)
                 }
             });
 
